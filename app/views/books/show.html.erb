@@ -1,0 +1,34 @@
+<h1>User info</h1>
+
+<%= attachment_image_tag @user, :profile_image, size: "100x50", fallback: "no_image.jpg" %>
+<p>name</p>
+<%= @user.name %>
+<p>introduction</p>
+<%= @user.introduction %>
+<%= link_to "edit", edit_user_path(current_user.id) %>
+
+<h1>New book</h1>
+
+<%= form_for(@bookf) do |f| %>
+
+    <h4>title</h4>
+    <%= f.text_field :title %>
+
+    <h4>opinion</h4>
+    <%= f.text_area :body %>
+
+    <%= f.submit 'Create Book' %>
+
+<% end %>
+
+<h1>Book detail</h1>
+		<%= link_to user_path(@user.id) do %>
+		<%= attachment_image_tag @user, :profile_image, size: "100x50", fallback: "no_image.jpg" %>
+		<%= @user.name %>
+		<% end %>
+<span><%= @book.title %></span>
+<span><%= @book.body %></span>
+<% if current_user.id == @user.id%>
+	<%= link_to "edit", edit_book_path(@book.id) %>
+	<%= link_to "destroy", book_path, method: :delete %>
+<% end %>
