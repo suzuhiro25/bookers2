@@ -11,7 +11,7 @@
       <%= f.password_field :password, autocomplete: "off", class:"form-control", id:"inputPassword", placeholder:"パスワード" %>
       <span class="fa fa-lock form-control-icon" aria-hidden="true"></span>
     </div>
-    <%= f.submit "Log in", class:"btn btn-lg btn-block btn-base-1 mt-20" %>
+    <input type="submit" name="commit" value="Log in" class="btn btn-primary" data-disable-with="Log in">
 <% end %>
 
 <%= render "devise/shared/links" %>
