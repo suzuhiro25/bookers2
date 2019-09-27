@@ -34,9 +34,13 @@
 			<tbody>
 				<tr><%= link_to user_path(@user.id) do %>
 					<td><%= attachment_image_tag @user, :profile_image, size: "100x50", fallback: "no_image.jpg" %></td>
-					<td><%= @user.name %></td>
+					<td><%= link_to user_path(@user.id) do %>
+					<%= @user.name %>
+					<% end %></td>
 				<% end %>
-				<td><span><%= @book.title %></span></td>
+				<td><%= link_to book_path(@book.id) do %>
+					<span><%= @book.title %></span>
+				<% end %></td>
 				<td><span><%= @book.body %></span></td>
 				<% if current_user.id == @user.id%>
 					<td><%= link_to edit_book_path(@book.id) do %>
