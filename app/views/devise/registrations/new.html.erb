@@ -1,4 +1,5 @@
-<h2 class="signup-title">Sign up</h2>
+<div class="signup-page">
+    <h2 class="signup-title">Sign up</h2>
 
 <div class="form-body">
 
@@ -28,8 +29,9 @@
         <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control", id:"inputConfirmPassword", placeholder:"パスワード確認" %>
          <span class="fa fa-check-circle-o form-control-icon" aria-hidden="true"></span>
     </div>
-        <input type="submit" name="commit" value="Sign up" class="btn btn-success" data-disable-with="Sign up">
+        <input type="submit" name="commit" value="Sign up" class="btn btn-success btn-signup" data-disable-with="Sign up">
 　<% end %>
 </div>
 
 <%= render "devise/shared/links" %>
+</div>

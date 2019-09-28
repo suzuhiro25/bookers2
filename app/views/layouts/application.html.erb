@@ -37,10 +37,11 @@
       </div>
       </div>
     </header>
-
-    <% if flash[:notice] %>
-      <p><%= flash[:notice] %></p>
+    <div class="message">
+      <% if flash[:notice] %>
+      <%= flash[:notice] %>
     <% end %>
+    </div>
     <%= yield %>
 
     <footer>

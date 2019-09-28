@@ -1,12 +1,14 @@
-<h1>Editing Book</h1>
-<%= form_for(@bookf) do |f| %>
+<div class="edit-book">
+		<h1>Editing Book</h1>
+	<%= form_for(@bookf) do |f| %>
 
-    <h4>title</h4>
-    <%= f.text_field :title %>
+	    <h4>title</h4>
+	    <%= f.text_field :title %>
 
-    <h4>opinion</h4>
-    <%= f.text_area :body %>
-<%= f.submit 'Update Book' %>
-<% end %>
-<%= link_to "Show", book_path(@bookf) %>
-<%= link_to "Back", books_path %>
+	    <h4>opinion</h4>
+	    <%= f.text_area :body %>
+	<%= f.submit class: "btn btn-primary col-xs-12"%>
+	<% end %>
+	<%= link_to "Show", book_path(@bookf) %>
+	<%= link_to "Back", books_path %>
+</div>

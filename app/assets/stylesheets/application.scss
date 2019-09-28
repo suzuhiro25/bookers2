@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap-sprockets";  /*ここを追加*/
+ @import "bootstrap-sprockets";
  @import "bootstrap";
 
 .navbar-inverse {
@@ -37,13 +37,13 @@ header {
 	text-align: right;
 	margin-right: 30px;
 }
-.btn-info {
+/*.btn-info {
 	width: 30%;
-}
-.btn-success {
-	width: 50%;
-}
-.row {
+}*/
+/*.btn-success {
+	width: 30%;
+}*/
+.row, .user-edit {
 	margin-left: 30px;
 	margin-right: 30px;
 }
@@ -63,5 +63,36 @@ input {
 	width: 30%;
 }
 .signup-title {
+	margin-top: 40px;
+}
+.introduction-edit, .update-user-edit {
+	width: 30%;
+}
+.user-info {
 	margin-top: 80px;
+}
+.edit-book {
+	width: 30%;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+.message {
+	margin-top: 70px;
+	color: green;
+}
+.login {
+	width: 30%;
+}
+.login-page, .signup-page, .password-page {
+	margin-right: 30px;
+	margin-left: 30px;
+}
+.field, .actions {
+	width: 30%;
+}
+.navbar-nav {
+	line-height: 50px;
+}
+.btn-signup {
+	width: 30%;
 }
